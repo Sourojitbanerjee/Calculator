@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.2s ease;
+}
+
+.calculator:hover {
+  transform: translateY(-5px);
+}
+
+.display {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-number {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.btn-number:hover {
+  background: #e9ecef;
+}
+
+.btn-operator {
+  background: #007bff;
+  color: white;
+}
+
+.btn-operator:hover {
+  background: #0056b3;
+}
+
+.btn-function {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-function:hover {
+  background: #545b62;
+}
+
+.btn-clear {
+  background: #dc3545;
+  color: white;
+  grid-column: span 2;
+}
+
+.btn-clear:hover {
+  background: #c82333;
+}
+
+.btn-enter {
+  background: #28a745;
+  color: white;
+  grid-column: span 2;
+}
+
+.btn-enter:hover {
+  background: #218838;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  button {
+    height: 50px;
+    font-size: 1rem;
+  }
+  .display {
+    font-size: 1.5rem;
+    min-height: 60px;
+    padding: 15px;
+  }
+}
